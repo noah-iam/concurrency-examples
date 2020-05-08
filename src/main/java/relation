@@ -1,0 +1,34 @@
+
+
+                                Collection
+
+                       Set<I>          List<I>                          Queue<I>
+
+            HashSet                    ( ArrayList, Vector, [ LinkedList,)   (PriorityQueue)]
+            LinkedHashSet
+
+
+
+            SortedSet<I>
+            1.
+            2.TreeSet
+
+
+
+           Object
+           Arrays
+           Collections
+
+
+
+
+
+
+
+
+                                              Map
+
+                                         HashTable,HashMap
+
+
+            Set -> Unique , No order
