@@ -5,18 +5,20 @@ class IncrementCounterTask implements Runnable{
     static Lock reentrantLock = new ReentrantLock();
     private  static int counter =0;
 
-    void incrementCounter(){
+    void incrementCounter()
+    {
+        reentrantLock.lock();
         counter++;
+        reentrantLock.unlock();
     }
 
     @Override
      public void run() {
-      //  reentrantLock.lock();
+
         for (int i = 0 ; i<10; i++) {
             incrementCounter();
             System.out.println(counter);
         }
-      //  reentrantLock.unlock();
     }
  }
 
