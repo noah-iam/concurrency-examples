@@ -14,6 +14,7 @@ class CountdownTask implements Runnable {
     @Override
     public void run() {
         try {
+            System.out.println("Current Thread: " + Thread.currentThread());
             Thread.sleep(4000);
             countDownLatch.countDown();
         } catch (Exception e) {
@@ -32,6 +33,7 @@ public class CountDownExample {
         executorService.submit(countdownTask);
         }
         countDownLatch.await();
-        System.out.println("Task finished !!");
+        System.out.println("Service up !!");
+        executorService.shutdown();
     }
 }
